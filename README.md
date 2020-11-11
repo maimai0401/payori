@@ -1,7 +1,11 @@
-## Usersテーブル
+## ※以下、devise使用予定
+## ※画像投稿機能にはアクティブストレージ使用予定
+
+
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string｜null: false|
+|nickname|string|null: false|
 
 ### Association
 - has_many :posts
@@ -9,40 +13,41 @@
 - has_many :comments
 
 
-## Postsテーブル
+## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|string｜null: false|
-|text|text｜null: false|
+|title|string|null: false|
+|text|text|null: false|
+|purchasesetting_id|integer|null: false|
+|price|integer|
 |user|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :user
-- belongs_to :order
+- has_many :users
+- has_many :orders
 - has_many :comments
 
 
-## Ordersテーブル
+## ordersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user|references|null: false, foreign_key: true|
-|item|references|null: false, foreign_key: true|
+|post|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :post
 - belongs_to :user
 - has_one :address
-- has_one :card
 
 
-## Addressesテーブル
+## addressesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|first_name|string｜null: false|
-|last_name|string｜null: false|
-|first_name_kana|string｜null: false|
-|last_name_kana|string｜null: false|
-|postal_code|string｜null: false|
+|first_name|string|null: false|
+|last_name|string|null: false|
+|first_name_kana|string|null: false|
+|last_name_kana|string|null: false|
+|postal_code|string|null: false|
 |prefecture_id|integer|null: false|
 |city|string|null: false|
 |address|string|null: false|
@@ -54,23 +59,12 @@
 - belongs_to :order
 
 
-## Cardsテーブル
+## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|card_token|string|null: false|
-|customer_token|string|null: false|
+|text|text|null: false|
 |user|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :order
-
-
-## Commentsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text｜null: false|
-|user|references|null: false, foreign_key: true|
-|item|references|null: false, foreign_key: true|
+|post|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :post
