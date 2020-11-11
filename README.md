@@ -1,4 +1,3 @@
-## ※以下、devise使用予定
 ## ※画像投稿機能にはアクティブストレージ使用予定
 
 
@@ -6,6 +5,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false|
+※以下、devise使用予定
 
 ### Association
 - has_many :posts
@@ -18,12 +18,12 @@
 |------|----|-------|
 |title|string|null: false|
 |text|text|null: false|
-|purchasesetting_id|integer|null: false|
+|purchase_setting_id|integer|null: false|
 |price|integer|
 |user|references|null: false, foreign_key: true|
 
 ### Association
-- has_many :users
+- belongs_to :user
 - has_many :orders
 - has_many :comments
 
