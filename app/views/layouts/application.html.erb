@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Payori</title>
+    <title>note</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <header class="header">
+      <div class="header_left">note</div>
+      <% if user_signed_in? %>
+      <div class="header_right">
+        <span><%= current_user.nickname %>
+          <ul class="user__info">
+            <li>
+              <%= link_to "マイページ", "/users/#{current_user.id}" %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            </li>
+          </ul>
+        </span>
+        <%= link_to  "投稿する", new_tweet_path, class: "list" %>
+      </div>
+      <% else %>
+        <div class="header_right">
+          <%= link_to "ログイン", new_user_session_path, class: "list" %>
+          <%= link_to "新規登録", new_user_registration_path, class: "list" %>
+        </div>
+      <% end %>
+    </header>
+      <%= yield %>
   </body>
 </html>

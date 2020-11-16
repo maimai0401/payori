@@ -1,0 +1,37 @@
+.header{
+  /* padding: 10px; */
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_left {
+  padding-left: 50px;
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+.header_right {
+  padding-right: 50px;
+  font-size: 30px;
+  padding-top: 20px;
+}
+.header_right a {
+  padding: 8px 20px;
+  font-size: 14px;
+  border: 2px solid #2cb696;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+  background-color: #2cb696;
+  text-decoration: none;
+  color: white;
+}
+
