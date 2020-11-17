@@ -1,0 +1,40 @@
+.form {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.field-text{
+  font-size: 10px;
+
+}
+
+.register-btn {
+  padding: 8px 20px;
+  font-size: 14px;
+  border: 2px solid #2cb696;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+  background-color: #2cb696;
+  text-decoration: none;
+  color: white;
+  margin: 50px;
+  
+  /* display: none; */
+}
+
+.field {
+  padding: 10px;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+
+}
