@@ -23,6 +23,7 @@ main {
 }
 
 .header_right {
+  /* display: flex; */
   padding-right: 50px;
   font-size: 30px;
   padding-top: 20px;

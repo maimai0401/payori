@@ -1,0 +1,23 @@
+<div class="form">
+  <div class="form-group">
+    <h2>ログイン</h2>
+    <%= form_with model: @user, url: user_session_path, class: 'login_user', local: true do |f| %>
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+
+      <div class="field">
+        <label class="field-text">メールアドレス</label><br />
+        <%= f.email_field :email, placeholder:"PC・携帯どちらでも可" %>
+      </div>
+
+      <div class="field">
+        <label class="field-text">パスワード</label><br />
+        <%= f.password_field :password, placeholder:"6文字以上の半角英数字" %>
+      </div>
+
+      <div class="btn">
+        <%= f.submit "ログイン" %>
+      </div>
+    <% end %>
+  </div>
+</div>
