@@ -24,25 +24,7 @@
         <%= f.password_field :password_confirmation, placeholder:"同じパスワードを入力して下さい" %>
       </div>
 
-      <div class="btn">
-        <%= f.submit "新規登録" %>
-      </div>
-
-<%# 
-      <label class="form-image">
-      <span class="image-file">画像</span>
-    </label> %>
+    <%= f.submit "新規登録" , class: 'form-submit'%>
     <% end %>
   </div>
 </div>
-
-
-      <%# <div class="register-btn"> %>
-        <%# f.submit "新規登録" %>
-      <%# </div> %>
-
-
-      <%# <label class="form-image">
-      <span class="image-file">画像</span>
-      <input type="file" class="hidden">
-    </label> %>

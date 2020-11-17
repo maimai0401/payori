@@ -4,7 +4,6 @@ main {
 }
 
 .header{
-  /* padding: 10px; */
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -23,7 +22,6 @@ main {
 }
 
 .header_right {
-  /* display: flex; */
   padding-right: 50px;
   font-size: 30px;
   padding-top: 20px;

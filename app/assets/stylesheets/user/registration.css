@@ -10,10 +10,18 @@
 
 .field-text{
   font-size: 10px;
-
 }
 
-.btn {
+.field {
+  padding: 10px;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.form-submit {
   padding: 8px 20px;
   font-size: 14px;
   border: 2px solid #2cb696;
@@ -24,17 +32,5 @@
   background-color: #2cb696;
   text-decoration: none;
   color: white;
-  margin: 50px;
-  
-  /* display: none; */
-}
-
-.field {
-  padding: 10px;
-}
-
-h2 {
-  font-size: 30px;
-  text-align: center;
-
+  margin: 50px;  
 }
