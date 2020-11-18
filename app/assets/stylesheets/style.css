@@ -1,10 +1,20 @@
+:root {
+  --main-btn: #2cb696;
+  --main-color: #fff;
+}
+
+.head {
+  font-size: 30px;
+  padding-top: 20px;
+}
+
 header,
 main {
   display: block;
 }
 
 .header{
-  background-color: #fff;
+  background-color: var(--main-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -17,26 +27,23 @@ main {
 
 .header_left {
   padding-left: 50px;
-  font-size: 30px;
-  padding-top: 20px;
 }
 
 .header_right {
   padding-right: 50px;
-  font-size: 30px;
-  padding-top: 20px;
 }
-.header_right a {
+
+.list {
   padding: 8px 20px;
   font-size: 14px;
-  border: 2px solid #2cb696;
+  border: 2px solid var(--main-btn);
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
   display: inline-block;
-  background-color: #2cb696;
+  background-color: var(--main-btn);
   text-decoration: none;
-  color: white;
+  color: var(--main-color);
 }
 
 .main {
