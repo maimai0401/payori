@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-btn: #2cb696;
+  --main-color: #fff;
+}
+
+.list {
+  padding: 8px 20px;
+  font-size: 14px;
+  border: 2px solid var(--main-btn);
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+  background-color: var(--main-btn);
+  text-decoration: none;
+  color: var(--main-color);
+}
