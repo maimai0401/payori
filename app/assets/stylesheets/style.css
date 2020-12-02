@@ -1,15 +1,6 @@
-.head {
-  font-size: 30px;
-  padding-top: 20px;
-}
-
 header,
 main {
-  display: block;
-}
-
-.header{
-  background-color: var(--main-color);
+  display: block;background-color: var(--main-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -20,11 +11,15 @@ main {
   justify-content: space-between;
 }
 
-.header_left {
+.left {
+  font-size: 30px;
+  padding-top: 20px;
   padding-left: 50px;
 }
 
-.header_right {
+.right {
+  font-size: 30px;
+  padding-top: 20px;
   padding-right: 50px;
 }
 

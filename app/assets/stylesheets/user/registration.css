@@ -8,12 +8,12 @@
   margin-top: 90px;
 }
 
-.field-text{
-  font-size: 10px;
-}
-
 .field {
   padding: 10px;
+}
+
+.text{
+  font-size: 10px;
 }
 
 h2 {
