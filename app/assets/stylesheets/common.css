@@ -7,6 +7,10 @@
   --main-color: #fff;
 }
 
+h1 {
+  padding-left: 50px;
+}
+
 .list {
   padding: 8px 20px;
   font-size: 14px;
@@ -19,4 +23,3 @@
   text-decoration: none;
   color: var(--main-color);
 }
-

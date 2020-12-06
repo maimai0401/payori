@@ -11,12 +11,6 @@ main {
   justify-content: space-between;
 }
 
-.left {
-  font-size: 30px;
-  padding-top: 20px;
-  padding-left: 50px;
-}
-
 .right {
   font-size: 30px;
   padding-top: 20px;
