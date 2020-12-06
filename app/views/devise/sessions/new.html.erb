@@ -1,6 +1,6 @@
 <div class="form">
   <div class="form-group">
-    <h2>ログイン</h2>
+    <div class="form-name">ログイン</div>
     <%= form_with model: @user, url: user_session_path, class: 'login-user', local: true do |f| %>
       <%= flash[:notice] %>
       <%= flash[:alert] %>

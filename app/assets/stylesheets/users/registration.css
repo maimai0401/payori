@@ -18,9 +18,10 @@
   font-size: 10px;
 }
 
-h2 {
+.form-name {
   font-size: 30px;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .form-submit {
