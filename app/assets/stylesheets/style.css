@@ -11,6 +11,12 @@ main {
   justify-content: space-between;
 }
 
+.title {
+  padding-left: 50px;
+  padding-top: 20px;
+  font-size: 40px;
+}
+
 .right {
   font-size: 30px;
   padding-top: 20px;
