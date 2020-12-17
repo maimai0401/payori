@@ -1,0 +1,29 @@
+.form {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.field {
+  padding: 10px;
+  border-bottom: 1px solid #3cdaca;
+  outline: none;
+}
+
+.text{
+  font-size: 10px;
+}
+
+.form-name {
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.form-submit {
+  margin: 50px;  
+}
