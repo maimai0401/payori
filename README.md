@@ -11,6 +11,8 @@
 - has_many :posts
 - has_many :orders
 - has_many :comments
+- has_one :user_address
+- has_one :user_profile
 
 
 ## postsテーブル
@@ -68,4 +70,30 @@
 
 ### Association
 - belongs_to :post
+- belongs_to :user
+
+
+#### 以下、ユーザープロフィール機能の追加実装です
+## user_addressesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|postal_code|string|null: false|
+|prefecture_id|integer|null: false|
+|city|string|null: false|
+|address|string|null: false|
+|building_name|string|
+
+### Association
+- belongs_to :user
+
+
+## user_profilesテーブル
+|first_name|string|null: false|
+|last_name|string|null: false|
+|first_name_kana|string|null: false|
+|last_name_kana|string|null: false|
+|birthday|date｜null: false|
+|introduction|text|
+
+### Association
 - belongs_to :user
