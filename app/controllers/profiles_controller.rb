@@ -1,17 +1,17 @@
 class ProfilesController < ApplicationController
   before_action :authenticate_user!, only: [:index]
-
+  before_action :select_profile, only: [:index, :edit, :update]
   def index
     @profile = ProfileForm.new
   end
 
-
-  def create
+  def update
     @profile = ProfileForm.new(profile_params)
+    @find_profile = ProfileForm.find(params[:id])
+    binding.pry
     if @profile.valid?
-      # binding.pry
       @profile.save
-      redirect_to root_path
+      return redirect_to root_path
     else
       render :index
     end
@@ -19,7 +19,10 @@ class ProfilesController < ApplicationController
 
   private
   def profile_params
-    params.permit(:postal_code, :prefecture_id, :city, :address, :building_name, :first_name, :last_name, :first_name_kana, :last_name_kana, :birthday, :introduction).merge(user_id: current_user.id)
+    params.require(:profile_form).permit(:postal_code, :prefecture_id, :city, :address, :building_name, :first_name, :last_name, :first_name_kana, :last_name_kana, :birthday, :introduction).merge(user_id: current_user.id)
   end
 
+  def select_profile
+    @user = User.find(params[:user_id])
+  end
 end

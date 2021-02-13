@@ -30,7 +30,7 @@ class ProfileForm
 
 
   def save
-    UserAddress.create(postal_code: postal_code, prefecture_id: prefecture_id, city: city, address: address, building_name: building_name, user_id: user_id)
-    UserProfile.create(first_name: first_name, last_name: last_name, first_name_kana: first_name_kana, last_name_kana: last_name_kana, birthday: birthday, introduction: introduction, user_id: user_id)
+    UserAddress.update(postal_code: postal_code, prefecture_id: prefecture_id, city: city, address: address, building_name: building_name, user_id: user_id)
+    UserProfile.update(first_name: first_name, last_name: last_name, first_name_kana: first_name_kana, last_name_kana: last_name_kana, birthday: birthday, introduction: introduction, user_id: user_id)
   end
 end
