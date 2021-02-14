@@ -5,10 +5,8 @@ class ProfilesController < ApplicationController
     @profile = ProfileForm.new
   end
 
-  def update
+  def create
     @profile = ProfileForm.new(profile_params)
-    @find_profile = ProfileForm.find(params[:id])
-    binding.pry
     if @profile.valid?
       @profile.save
       return redirect_to root_path

@@ -1,7 +1,7 @@
 <div class="form">
   <div class="form-group">
     <div class="form-name">住所</div>
-    <%= form_with model: @profile, url: user_profile_path(@user.id, @find_profile), class: 'new-user', local: true do |f| %>
+    <%= form_with model: @profile, url: user_profiles_path, class: 'new-user', local: true do |f| %>
       <%= render 'shared/error_messages', model: @profile %>
 
       <div class="field">
